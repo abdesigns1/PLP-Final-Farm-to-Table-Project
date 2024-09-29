@@ -1,0 +1,173 @@
+ 
+ body {
+    font-family: "Manrope", sans-serif;
+      background-color: #f8f9fa;
+  }
+
+  
+  /* Nav Bar Styles */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand img {
+    width: 120px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 400;
+  }
+  
+  .navbar-nav .nav-item:hover .nav-link {
+    color: #17b832 !important;
+  }
+  
+  .navbar-custom .social-icons i {
+    color: #ffffff;
+    margin-right: 15px;
+    font-size: 18px;
+  }
+  
+  .navbar-custom .contact-info {
+    color: #ffffff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-custom .contact-info i {
+    margin-right: 8px;
+    color: #ffc107;
+  }
+  
+  .navbar-custom .navbar-toggler {
+    border: none;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar-custom .social-icons {
+        display: none;
+    }
+    .navbar-custom .contact-info {
+        display: none;
+    }
+  }
+  
+  /* End Nav Bar Styles */
+
+  
+
+  /* footer scetion */
+
+.footer {
+    background-color: #1e1e1e;
+    color: #bbb;
+    padding: 0px 0;
+    padding-top: 30px;
+    
+  }
+  .footer h5 {
+    color: #fff;
+  }
+  .footer .social-icons a {
+    margin: 10px;
+    color: #bbb;
+    font-size: 1.5rem;
+  }
+  .footer a {
+    color: #bbb;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    color: #ffd343;
+  }
+  .footer .subscribe-form input[type="email"] {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .footer .subscribe-form button {
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .footer-bottom {
+    background-color: #151515;
+    color: #bbb;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-social-icons {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  
+  }
+  
+ 
+ 
+
+ 
+ 
+ 
+ /* Green Theme */
+ .bg-green {
+    background-color: #4caf50 !important;
+    color: white;
+  }
+
+  .text-green {
+    color: #4caf50 !important;
+  }
+
+  .card-green {
+    border-color: #4caf50;
+  }
+
+  .card-header-green {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  /* Sidebar Styles */
+  .sidebar {
+    height: 100vh;
+    background-color: #2e7d32;
+    color: white;
+    padding-top: 20px;
+  }
+
+  .sidebar a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .sidebar a:hover {
+    background-color: #388e3c;
+    color: white;
+  }
+
+  /* Main Content Padding */
+  .main-content {
+    padding: 20px;
+  }
+
+  /* Responsive Layout for Sidebar */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }

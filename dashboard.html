@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Your Name">
+    <title>Home | ABGRO Official Website</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Favicon CDN -->
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/favicon.ico/1.0.1/favicon.ico">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Font Awesome for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     
+
+
+<!-- Custom CSS -->
+<style>
+    body {
+      background-color: #f5f5f5;
+    }
+
+    /* Green Theme */
+    .bg-green {
+      background-color: #4caf50 !important;
+      color: white;
+    }
+
+    .text-green {
+      color: #4caf50 !important;
+    }
+
+    .card-green {
+      border-color: #4caf50;
+    }
+
+    .card-header-green {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      height: 100vh;
+      background-color: #2e7d32;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #388e3c;
+      color: white;
+    }
+
+    /* Main Content Padding */
+    .main-content {
+      padding: 20px;
+    }
+
+    /* Responsive Layout for Sidebar */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+
+
+    /* Green Theme */
+    .bg-green {
+      background-color: #4caf50 !important;
+      color: white;
+    }
+
+    .card-header-green {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    /* Chart Container */
+    .chart-container {
+      position: relative;
+      margin: auto;
+      height: 400px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/index.html">
+            <img src="/assets/Logo white.png" alt="Abgro Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/communities.html">Communities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="social-icons ml-auto d-none d-lg-block">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="contact-info ml-3 d-none d-lg-flex">
+                <a href="/Login.html" class="btn btn-success">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Head section -->
+<section class="cta-section d-flex align-items-center text-center">
+    <div class="container">
+      <h1 class="cta-title mb-4">Our Latest Blog Posts</h1>
+      <p class="cta-text mb-4" style="color: azure;">Stay updated with our latest articles and news</p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- Dashboard Layout -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 sidebar bg-green">
+        <h4 class="text-center">Dashboard</h4>
+        <a href="#">Overview</a>
+        <a href="#">Orders</a>
+        <a href="#">Products</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="col-md-10 main-content">
+        <div class="row">
+          <!-- Bar Chart: Total Sales -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header card-header-green">
+                Total Sales (Bar Chart)
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas id="salesChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Line Chart: Orders Over Time -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header card-header-green">
+                Orders Over Time (Line Chart)
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas id="ordersChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doughnut Chart: Stock Levels -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header card-header-green">
+                Stock Levels (Doughnut Chart)
+              </div>
+              <div class="card-body">
+                <div class="chart-container">
+                  <canvas id="stockChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+
+  <!-- Dashboard Layout -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 sidebar bg-green">
+        <h4 class="text-center">Dashboard</h4>
+        <a href="#">Overview</a>
+        <a href="#">Orders</a>
+        <a href="#">Products</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <hr>
+        <h5 class="text-center">Farmers</h5>
+        <a href="#">Add Products</a>
+        <a href="#">Track Sales</a>
+        <a href="#">Manage Inventory</a>
+        <hr>
+        <h5 class="text-center">Consumers</h5>
+        <a href="#">Browse Products</a>
+        <a href="#">View Orders</a>
+        <a href="#">Track Deliveries</a>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main class="col-md-10 main-content">
+        <div class="row">
+          <!-- Welcome Section -->
+          <div class="col-md-12 mb-4">
+            <div class="card card-green">
+              <div class="card-header card-header-green">
+                Welcome to the Farm-to-Table Dashboard
+              </div>
+              <div class="card-body">
+                <p>This dashboard allows farmers to manage their products and sales, while consumers can browse and order fresh, local produce. Use the navigation menu to access different sections.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Farmer Section -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header bg-green text-white">
+                Farmer's Overview
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total Products Sold</h5>
+                <p class="card-text">Track how many products you’ve sold this month.</p>
+                <a href="#" class="btn btn-success">View Sales</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consumer Section -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header bg-green text-white">
+                Consumer's Overview
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Pending Orders</h5>
+                <p class="card-text">Check the status of your recent orders.</p>
+                <a href="#" class="btn btn-success">View Orders</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Farmers Stats Section -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header bg-green text-white">
+                Manage Inventory
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Current Stock Levels</h5>
+                <p class="card-text">Monitor and update your available products.</p>
+                <a href="#" class="btn btn-success">Update Inventory</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consumer Products Section -->
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header bg-green text-white">
+                Browse Products
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Available Fresh Produce</h5>
+                <p class="card-text">Browse a variety of fresh and organic produce available for delivery.</p>
+                <a href="#" class="btn btn-success">Browse Products</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Company Info Section -->
+        <div class="col-md-3" style="text-align: left;">
+  
+          <a class="navbar-brand" href="#">
+            <img src="/assets/Logo white.png" alt="Abgro Logo">
+        </a>
+  
+          <p style="padding-top: 50px;">There are many variations of passages of lorem ipsum available, but the majority suffered.</p>
+          <div class="footer-social-icons">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+  
+        <!-- Explore Section -->
+        <div class="col-md-3" style="text-align: left; padding: 30px;">
+          <h5>Explore</h5>
+          <ul class="list-unstyled" style="padding-top: 50px;">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Our Projects</a></li>
+            <li><a href="#">Meet the Farmers</a></li>
+            <li><a href="#">Latest News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- News Section -->
+        <div class="col-md-3" style="text-align: left; padding: 30px;">
+          <h5>News</h5>
+          <ul class="list-unstyled" style="padding-top: 50px;">
+            <li><a href="#">Bringing Food Production Back To Cities</a><br><small>July 5, 2022</small></li>
+            <li><a href="#">The Future of Farming, Smart Irrigation Solutions</a><br><small>July 5, 2022</small></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Section -->
+        <div class="col-md-3" style="text-align: left; padding: 30px;">
+          <h5>Contact</h5>
+          <ul class="list-unstyled" style="padding-top: 50px;">
+            <li><i class="bi bi-telephone"></i> 09038784768</li>
+            <li><i class="bi bi-envelope"></i> abbeyayeni2012@gmail.com</li>
+            <li><i class="bi bi-geo-alt"></i> Lugbe Farms. FHA, Lugbe, Abuja, Nigeria</li>
+          </ul>
+          <div class="subscribe-form">
+            <input type="email" id="email" placeholder="Your Email Address">
+            <button type="submit"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p>© All Copyright 2024 | <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+  
+  
+  
+  
+      <!-- Bootstrap 4 JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+        <!-- Bootstrap 5 JS Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+       <!-- Chart.js Configurations -->
+  <script>
+    // Bar Chart: Total Sales
+    const ctxSales = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctxSales, {
+      type: 'bar',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: 'Total Sales ($)',
+          data: [12000, 15000, 14000, 18000, 21000, 25000],
+          backgroundColor: 'rgba(76, 175, 80, 0.7)',
+          borderColor: 'rgba(76, 175, 80, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Line Chart: Orders Over Time
+    const ctxOrders = document.getElementById('ordersChart').getContext('2d');
+    const ordersChart = new Chart(ctxOrders, {
+      type: 'line',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+        datasets: [{
+          label: 'Orders',
+          data: [50, 75, 100, 125, 150],
+          backgroundColor: 'rgba(76, 175, 80, 0.3)',
+          borderColor: 'rgba(76, 175, 80, 1)',
+          borderWidth: 2,
+          fill: true
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Doughnut Chart: Stock Levels
+    const ctxStock = document.getElementById('stockChart').getContext('2d');
+    const stockChart = new Chart(ctxStock, {
+      type: 'doughnut',
+      data: {
+        labels: ['Tomatoes', 'Lettuce', 'Carrots', 'Peppers'],
+        datasets: [{
+          label: 'Stock Levels',
+          data: [300, 200, 150, 100],
+          backgroundColor: [
+            'rgba(76, 175, 80, 0.9)',
+            'rgba(139, 195, 74, 0.9)',
+            'rgba(205, 220, 57, 0.9)',
+            'rgba(255, 235, 59, 0.9)'
+          ],
+          borderColor: [
+            'rgba(76, 175, 80, 1)',
+            'rgba(139, 195, 74, 1)',
+            'rgba(205, 220, 57, 1)',
+            'rgba(255, 235, 59, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+</script>
+  </body>
+  </html>
+  
