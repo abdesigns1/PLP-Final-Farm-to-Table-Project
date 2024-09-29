@@ -1,0 +1,720 @@
+
+body {
+  font-family: "Manrope", sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+/* 
+-------------------------------------------------------------
+HOME PAGE CSS STYLES
+-------------------------------------------------------------
+*/
+
+/* Nav Bar Styles */
+.navbar-custom {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  width: 120px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 400;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: #17b832 !important;
+}
+
+.navbar-custom .social-icons i {
+  color: #ffffff;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.navbar-custom .contact-info {
+  color: #ffffff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .contact-info i {
+  margin-right: 8px;
+  color: #ffc107;
+}
+
+.navbar-custom .navbar-toggler {
+  border: none;
+  color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-custom .social-icons {
+      display: none;
+  }
+  .navbar-custom .contact-info {
+      display: none;
+  }
+}
+
+/* End Nav Bar Styles */
+
+
+/* Hero Section styles */
+.hero-section {
+    height: 100vh;
+    background: url('/assets/Hero Image.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content a {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
+/* Hero Responsive */
+@media (max-width: 767px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+}
+
+
+
+
+/* About Section */
+.about-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+.custom-image-stack {
+  position: relative;
+}
+.custom-image-stack img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.text-section h3 {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+.text-section p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.btn-discover {
+  background-color: #29b149;
+  border: none;
+}
+
+/* Get to know us animation */
+
+
+
+
+
+/* Featured Products Scetion */
+
+.featured-products {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Product Card Styling */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.product-card h5 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #f9a826;
+}
+
+/* Product Card Hover Effect */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Float-in Animation */
+.float-in {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: floatIn 1s forwards;
+}
+
+/* Keyframes for Float-in Animation */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 575.98px) {
+  .product-card {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+
+
+
+
+ /* Custom styles for testimonial card */
+ .testimonial-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.testimonial-card p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+}
+.testimonial-author {
+  text-align: center;
+  margin-top: 20px;
+}
+.testimonial-author img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.testimonial-author h5 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.testimonial-author span {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+.rating {
+  color: #f5c518;
+}
+/* Background for the whole section */
+.testimonial-section {
+  background-color: #44ad52;
+  padding: 80px 0;
+}
+
+
+
+/* footer scetion */
+
+.footer {
+  background-color: #1e1e1e;
+  color: #bbb;
+  padding: 0px 0;
+  padding-top: 30px;
+  
+}
+.footer h5 {
+  color: #fff;
+}
+.footer .social-icons a {
+  margin: 10px;
+  color: #bbb;
+  font-size: 1.5rem;
+}
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #ffd343;
+}
+.footer .subscribe-form input[type="email"] {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100%;
+}
+.footer .subscribe-form button {
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+.footer-bottom {
+  background-color: #151515;
+  color: #bbb;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-social-icons {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+}
+
+
+
+/* Parallax Background for Call to Action Section */
+.cta-section {
+  background: url('/assets/cta\ bg.jpg') no-repeat center center/cover;
+  height: 70vh;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  color: white;
+ 
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text pop */
+  z-index: -1;
+}
+
+/* Call to Action Title Styling */
+.cta-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: initial;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #f9a826;
+  border: none;
+  padding: 10px 30px;
+}
+
+.btn-primary:hover {
+  background-color: #ffa500;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .cta-title {
+    font-size: 2.5rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* 
+-------------------------------------------------------------
+lOG IN/REGISTER PAGE CSS STYLES
+-------------------------------------------------------------
+*/
+
+/* Background Styling */
+.login-bg {
+  background: url('/assets/Log\ in\ background.png') no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+}
+
+.login-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Glassmorphism Effect for Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  max-width: 350px;
+  color: #fff;
+}
+
+/* Glassmorphic Inputs */
+.glass-input {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 15px;
+}
+
+.glass-input:focus {
+  outline: none;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #f9a826;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ffa500;
+}
+
+/* Responsive Styling */
+@media (max-width: 575.98px) {
+  .glass-card {
+    padding: 20px;
+  }
+
+  .glass-input {
+    padding: 8px 10px;
+  }
+}
+
+
+/* 
+-------------------------------------------------------------
+CONTACT PAGE CSS STYLES
+-------------------------------------------------------------
+*/
+
+/* Body Styling */
+
+/* 
+body {
+  background-color: #f0f4f7;
+  font-family: 'Arial', sans-serif;
+}
+ */
+.contact-section {
+  margin-top: 500;
+  background-image: url(/assets/wheats.webp.jpg);
+  background-size: cover;
+
+}
+
+
+/* Glassmorphism Form */
+.glass-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-form h3 {
+  font-weight: bold;
+  color: #333;
+}
+
+.glass-form input,
+.glass-form textarea {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  color: #333;
+  border-radius: 5px;
+}
+
+.glass-form button {
+  font-weight: bold;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-weight: bold;
+  color: #fff;
+}
+
+.contact-info p {
+  font-size: 16px;
+}
+
+.contact-info ul {
+  padding-left: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-info, .glass-form {
+    margin-bottom: 20px;
+  }
+
+  .glass-form h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* 
+-------------------------------------------------------------
+ABOUT PAGE CSS STYLES
+-------------------------------------------------------------
+*/
+
+.about-section img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-section img:hover {
+  transform: scale(1.05);
+}
+
+.team-section img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-section img:hover {
+  transform: rotate(360deg);
+}
+
+.values-section i {
+  transition: color 0.3s ease-in-out;
+}
+
+.values-section i:hover {
+  color: #28a745;
+}
+
+
+
+ /* Parallax background */
+ .parallax-section {
+  background-image: url('/assets/cta\ bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Custom call-to-action styling */
+.cta-content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 20px 60px;
+  font-size: 1.2rem;
+}
+
+
+/* 
+-------------------------------------------------------------
+MARKET PLACE PAGE CSS STYLES
+-------------------------------------------------------------
+*/
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+
+/*
+-------------------------------------------------------------
+BLOG POSTS CSS STYLES
+-------------------------------------------------------------
+*/
+
+article img {
+  width: 100%;
+  height: auto;
+}
+
+blockquote {
+  background-color: #ade7bc;
+  padding: 1.5rem;
+  border-left: 5px solid #035f00;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.comments input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+aside ul {
+  padding-left: 0;
+}
+
+aside ul li a {
+  color: #198754;
+  text-decoration: none;
+}
+
+aside ul li a:hover {
+  text-decoration: unset;
+  color: rgb(255, 196, 0);
+}
+
+.blog-post-section {
+  background: url('/assets/cta\ bg.jpg') no-repeat center center/cover;
+  height: 40vh;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  color: white;
+ 
+}
+
+.blog-post-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text pop */
+  z-index: -1;
+}
+
+
